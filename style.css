@@ -1,0 +1,127 @@
+/* CSS RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+*/
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Custom Properties */
+
+:root {
+    --ff-base: 'Outfit', sans-serif;
+
+    --fw-base: 400;
+    --fw-bold: 700;
+
+    --clr-primary-600: hsl(218, 44%, 22%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(212, 45%, 89%);
+    --clr-neutral-400: hsl(220, 15%, 55%);
+
+}
+
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-base);
+    background-color: var(--clr-neutral-200);
+    margin: 1em;
+    /* Only as this is a standalone component would not use in a larger project */
+    display: grid;
+    place-items: center;
+}
+
+.qr {
+    background-color: var(--clr-neutral-100);
+    padding: 1em;
+    border-radius: 1.0em;
+    max-width: 375px;
+}
+
+.qr__image {
+    border-radius: 1.0em;
+    margin-bottom: 0.25em;
+}
+
+.qr__content {
+    --content-spacing: 0.75rem;
+    --content-padding: 1rem;
+
+    display: grid;
+    /* gap: 1em; */
+    text-align: center;
+
+    padding: var(--content-padding);
+}
+
+.qr__heading {
+    color: var(--clr-primary-600);
+    font-weight: var(--fw-bold);
+    font-size: 1.4rem;
+    margin: var(--content-spacing);
+    line-height: 1.25em;
+}
+
+.qr__text {
+    color: var(--clr-neutral-400);
+    margin: var(--content-spacing);
+    font-size: 0.95rem;
+    line-height: 1.25em;
+}
